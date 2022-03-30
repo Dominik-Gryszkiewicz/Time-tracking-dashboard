@@ -1,0 +1,313 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  background-color: #0f1424;
+  color: white;
+}
+
+@media (min-width: 900px) {
+  main {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.component {
+  width: 88%;
+  max-width: 340px;
+  margin: 60px auto 70px auto;
+}
+
+@media (min-width: 900px) {
+  .component {
+    width: 80%;
+    max-width: 1000px;
+    height: 450px;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 15px;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.component .box {
+  border-radius: 10px;
+  margin-top: 20px;
+  min-height: 140px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .component .box {
+    margin-top: 0;
+  }
+}
+
+.component .box--header {
+  background-color: #1c1f4a;
+}
+
+@media (min-width: 900px) {
+  .component .box--header {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+}
+
+.component .box--header__person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #5847eb;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+@media (min-width: 900px) {
+  .component .box--header__person {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .component .box--header__person {
+    padding-left: 35px;
+  }
+}
+
+.component .box--header__person__img {
+  width: 60px;
+  -webkit-box-shadow: 0 0 0 3px white;
+          box-shadow: 0 0 0 3px white;
+  border-radius: 50%;
+}
+
+@media (min-width: 360px) {
+  .component .box--header__person__img {
+    margin-top: 10px;
+    width: 70px;
+  }
+}
+
+@media (min-width: 360px) {
+  .component .box--header__person__info {
+    margin-left: -20px;
+  }
+}
+
+@media (min-width: 390px) {
+  .component .box--header__person__info {
+    margin-left: -40px;
+  }
+}
+
+@media (min-width: 900px) {
+  .component .box--header__person__info {
+    margin-left: 0;
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.component .box--header__person__info__first {
+  font-size: 14px;
+  color: #bdc1ff;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+@media (min-width: 900px) {
+  .component .box--header__person__info__first {
+    margin-bottom: 10px;
+  }
+}
+
+.component .box--header__person__info__second {
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+@media (min-width: 900px) {
+  .component .box--header__person__info__second {
+    font-size: 31px;
+  }
+}
+
+.component .box--header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 30px;
+  font-size: 15px;
+}
+
+@media (min-width: 900px) {
+  .component .box--header__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin-top: 10px;
+  }
+}
+
+.component .box--header__nav a.active {
+  color: white;
+  opacity: 1;
+}
+
+.component .box--header__nav a {
+  color: #bdc1ff;
+  text-decoration: none;
+  opacity: 0.6;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.component .box--header__nav a:hover {
+  color: white;
+  opacity: 1;
+}
+
+@media (min-width: 900px) {
+  .component .box--header__nav a {
+    font-size: 16px;
+    height: 40px;
+  }
+}
+
+.component .box--work {
+  background-color: #ff8c66;
+}
+
+.component .box__img {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+}
+
+.component .box__inside {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35px;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #1c1f4a;
+  padding: 25px;
+  border-radius: 10px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+@media (min-width: 360px) {
+  .component .box__inside {
+    padding: 25px 30px;
+  }
+}
+
+.component .box__inside:hover {
+  background-color: #323986;
+  cursor: pointer;
+}
+
+.component .box__inside__info__time {
+  margin-top: 5px;
+  font-size: 26px;
+  font-weight: lighter;
+}
+
+@media (min-width: 900px) {
+  .component .box__inside__info__time {
+    font-size: 42px;
+    margin-top: 20px;
+  }
+}
+
+.component .box__inside__last {
+  text-align: right;
+}
+
+.component .box__inside__last__icon {
+  color: white;
+}
+
+.component .box__inside__last__time {
+  font-size: 14px;
+  color: #bdc1ff;
+  opacity: 0.7;
+  margin-top: 15px;
+}
+
+@media (min-width: 900px) {
+  .component .box__inside__last__time {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+}
+
+.component .box--play {
+  background-color: #56c2e6;
+}
+
+.component .box--study {
+  background-color: #ff5c7c;
+}
+
+.component .box--exercise {
+  background-color: #4acf81;
+}
+
+.component .box--social {
+  background-color: #7536d3;
+}
+
+.component .box--self {
+  background-color: #f1c65b;
+}
+/*# sourceMappingURL=style.css.map */
